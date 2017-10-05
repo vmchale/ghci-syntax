@@ -6,7 +6,7 @@ syntax keyword ghciKeyword prompt
 syntax match ghciDefinition ":set"
 syntax match ghciDefinition ":def"
 syntax match ghciFlag "\v\+[A-Za-z]"
-syntax match ghcFlag "\v-[A-za-z]"
+syntax match ghcFlag "\v-[A-za-z\-]*"
 syntax match stringSpecial '\\"'
 syntax match ghciParens "(\|)\|\[\|\]\|,"
 syntax match ghciOperator "[-!#$%&*+/<=>\?@\\^|~:.]\+\|\<_\>" contains=ghciFlag,ghcFlag,ghciDefinition
@@ -17,7 +17,7 @@ syntax match ghciComment "\v--.*$"
 highlight link ghciParens Special
 highlight link ghciOperator Number
 highlight link ghciIdentifier Identifier
-highlight link ghcFlag Special
+highlight link ghcFlag String
 highlight link ghciFlag Number
 highlight link ghciKeyword Keyword
 highlight link ghciDefinition Structure

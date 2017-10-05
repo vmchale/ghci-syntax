@@ -1,0 +1,5 @@
+language: python
+install: pip install vim-vint
+script:
+    - vint ftdetect/ghci.vim
+    - vint syntax/ghci.vim

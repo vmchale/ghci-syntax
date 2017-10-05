@@ -8,7 +8,7 @@ syntax match ghciDefinition ":def"
 syntax match ghciFlag "\v\+[A-Za-z]"
 syntax match ghcFlag "\v-[A-za-z]"
 syntax match stringSpecial '\\"'
-syntax match ghciOperator \"v\(->$.+*\)\*"
+syntax match ghciOperator "\v(\\->\$\.\+\*)*"
 syntax match ghciIdentifier "\v[a-z][A-Za-z]*"
 syntax region ghciString start='"' end='"' contains=stringSpecial
 syntax match ghciComment "\v--.*$"

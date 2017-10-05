@@ -9,7 +9,7 @@ syntax match ghciFlag "\v\+[A-Za-z]"
 syntax match ghcFlag "\v-[A-za-z]"
 syntax match stringSpecial '\\"'
 syntax match ghciOperator "[-!#$%&\*\+/<=>\?@\\^|~:.]\+\|\<_\>"
-syntax match ghciIdentifier "\v[a-z][A-Za-z]*"
+syntax match ghciIdentifier "\v[a-z][A-Za-z]*" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax region ghciString start='"' end='"' contains=stringSpecial
 syntax match ghciComment "\v--.*$"
 

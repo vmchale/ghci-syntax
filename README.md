@@ -1,0 +1,5 @@
+# syntax-ghci
+
+## Installation
+
+## Configuration

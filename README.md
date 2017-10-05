@@ -1,5 +1,11 @@
 # syntax-ghci
 
+Syntax highlighting for `.ghci` configuration files.
+
 ## Installation
 
-## Configuration
+Using [vim-plug](https://github.com/junegunn/vim-plug):
+
+```vim
+Plug 'vmchale/ghci-syntax'
+```

@@ -3,6 +3,9 @@ if exists('b:current_syntax')
 endif
 
 syntax keyword ghciKeyword prompt
+syntax match ghciDefinition ":"
+syntax match ghciDefinition ":?"
+syntax match ghciDefinition ":!"
 syntax match ghciDefinition ":m"
 syntax match ghciDefinition ":a"
 syntax match ghciDefinition ":load"

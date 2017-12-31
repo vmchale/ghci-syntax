@@ -1,4 +1,3 @@
-scriptencoding utf-8
 if exists('b:current_syntax')
     finish
 endif
@@ -46,14 +45,12 @@ syntax match ghciFlag "\v\+[A-Za-z]"
 syntax match ghcFlag "\v-[A-za-z\-]*"
 syntax match stringSpecial '\\"'
 syntax match ghciParens "(\|)\|\[\|\]\|,"
-syntax match ghciOperator "[-!#$%&*+/<=>\?@\\^|~:.]\+\|\<_\>" contains=ghciFlag,ghcFlag,ghciDefinition,lambda
+syntax match ghciOperator "[-!#$%&*+/<=>\?@\\^|~:.]\+\|\<_\>" contains=ghciFlag,ghcFlag,ghciDefinition
 syntax match ghciIdentifier "\v[a-z][A-Za-z]*" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax region ghciString start='"' end='"' contains=stringSpecial
-syntax match ghciModule "\v[A-Za-z.]+" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
+syntax match ghciModule "\v[A-Za-z\.]+" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax match ghciComment "\v--.*$"
-syntax match lambda '\\' conceal cchar=λ
 
-highlight link lambda Operator
 highlight link ghciModule Underlined
 highlight link ghciParens Special
 highlight link ghciOperator Number

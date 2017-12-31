@@ -11,3 +11,11 @@ Using [vim-plug](https://github.com/junegunn/vim-plug):
 ```vim
 Plug 'vmchale/ghci-syntax'
 ```
+
+## Documentation
+
+To view documentation for the plugin:
+
+```vim
+:GHCiContents
+```

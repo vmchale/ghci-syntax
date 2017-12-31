@@ -3,7 +3,7 @@ if exists('b:current_syntax')
     finish
 endif
 
-syntax match lamba '\\' conceal cchar=λ
+syntax match lambda '\\' conceal cchar=λ
 syntax keyword ghciKeyword prompt
 syntax match ghciDefinition ":"
 syntax match ghciDefinition ":?"
@@ -47,7 +47,7 @@ syntax match ghciFlag "\v\+[A-Za-z]"
 syntax match ghcFlag "\v-[A-za-z\-]*"
 syntax match stringSpecial '\\"'
 syntax match ghciParens "(\|)\|\[\|\]\|,"
-syntax match ghciOperator "[-!#$%&*+/<=>\?@\\^|~:.]\+\|\<_\>" contains=ghciFlag,ghcFlag,ghciDefinition
+syntax match ghciOperator "[-!#$%&*+/<=>\?@\\^|~:.]\+\|\<_\>" contains=ghciFlag,ghcFlag,ghciDefinition,lambda
 syntax match ghciIdentifier "\v[a-z][A-Za-z]*" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax region ghciString start='"' end='"' contains=stringSpecial
 syntax match ghciModule "\v[A-Za-z\.]+" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword

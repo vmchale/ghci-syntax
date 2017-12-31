@@ -3,7 +3,6 @@ if exists('b:current_syntax')
     finish
 endif
 
-syntax match lambda '\\' conceal cchar=λ
 syntax keyword ghciKeyword prompt
 syntax match ghciDefinition ":"
 syntax match ghciDefinition ":?"
@@ -52,6 +51,7 @@ syntax match ghciIdentifier "\v[a-z][A-Za-z]*" contains=ghciDefinition,ghciFlag,
 syntax region ghciString start='"' end='"' contains=stringSpecial
 syntax match ghciModule "\v[A-Za-z.]+" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax match ghciComment "\v--.*$"
+syntax match lambda '\\' conceal cchar=λ
 
 highlight link lambda Operator
 highlight link ghciModule Underlined

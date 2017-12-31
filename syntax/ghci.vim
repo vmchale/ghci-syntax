@@ -48,7 +48,7 @@ syntax match ghciParens "(\|)\|\[\|\]\|,"
 syntax match ghciOperator "[-!#$%&*+/<=>\?@\\^|~:.]\+\|\<_\>" contains=ghciFlag,ghcFlag,ghciDefinition
 syntax match ghciIdentifier "\v[a-z][A-Za-z]*" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax region ghciString start='"' end='"' contains=stringSpecial
-syntax match ghciModule "\v[A-Za-z\.]+" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
+syntax match ghciModule "\v[A-Za-z.]+" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax match ghciComment "\v--.*$"
 
 highlight link ghciModule Underlined

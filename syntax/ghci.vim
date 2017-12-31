@@ -17,7 +17,7 @@ syntax region ghciString start='"' end='"' contains=stringSpecial
 syntax match ghciModule "\v[A-Za-z\.]*" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax match ghciComment "\v--.*$"
 
-highlight link ghciModule Keyword
+highlight link ghciModule Underlined
 highlight link ghciParens Special
 highlight link ghciOperator Number
 highlight link ghciIdentifier Identifier

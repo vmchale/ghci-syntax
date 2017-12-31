@@ -4,6 +4,7 @@ endif
 
 syntax keyword ghciKeyword prompt
 syntax match ghciDefinition ":m"
+syntax match ghciDefinition ":a"
 syntax match ghciDefinition ":load"
 syntax match ghciDefinition ":set"
 syntax match ghciDefinition ":def"

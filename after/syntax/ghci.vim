@@ -4,7 +4,7 @@ let g:ghci_conceal = get(g:, 'ghci_conceal', 'false')
 
 if g:ghci_conceal ==? 'true'
 
-    syntax match lamba '\\' conceal cchar=λ
+    syntax match lambda '\\' conceal cchar=λ
 
 endif
 

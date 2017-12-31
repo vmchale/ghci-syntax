@@ -1,0 +1,19 @@
+*ghci* GHCi syntax highlighting
+
+=====================================================================
+CONTENTS                                               *GHCiContents*
+
+    1. Config .......................................... ❘GHCiConfig❘
+
+======================================================================
+Section 1: Config                                         *GHCiConfig*
+
+----------------------------------------------------------------------
+                                                    *'g:ghci_conceal'*
+
+Values: 'false', 'true'
+Default: 'false'
+
+When set to 'true', backslashes will be rendered as lambdas. >
+    let g:ghci_conceal='true'
+<

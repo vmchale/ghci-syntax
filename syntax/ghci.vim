@@ -3,6 +3,8 @@ if exists('b:current_syntax')
 endif
 
 syntax keyword ghciKeyword prompt
+syntax match ghciDefinition ":m"
+syntax match ghciDefinition ":load"
 syntax match ghciDefinition ":set"
 syntax match ghciDefinition ":def"
 syntax match ghciFlag "\v\+[A-Za-z]"
@@ -12,8 +14,10 @@ syntax match ghciParens "(\|)\|\[\|\]\|,"
 syntax match ghciOperator "[-!#$%&*+/<=>\?@\\^|~:.]\+\|\<_\>" contains=ghciFlag,ghcFlag,ghciDefinition
 syntax match ghciIdentifier "\v[a-z][A-Za-z]*" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax region ghciString start='"' end='"' contains=stringSpecial
+syntax match ghciModule "\v[A-Za-z\.]*"
 syntax match ghciComment "\v--.*$"
 
+highlight link ghciModule Keyword
 highlight link ghciParens Special
 highlight link ghciOperator Number
 highlight link ghciIdentifier Identifier

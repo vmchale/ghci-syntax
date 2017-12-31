@@ -1,1 +1,1 @@
-au BufNewFile,BufRead .ghci set filetype=ghci
+au BufNewFile,BufRead .ghci,ghci.conf set filetype=ghci

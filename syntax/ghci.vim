@@ -1,7 +1,9 @@
+scriptencoding utf-8
 if exists('b:current_syntax')
     finish
 endif
 
+syntax match lamba '\\' conceal cchar=λ
 syntax keyword ghciKeyword prompt
 syntax match ghciDefinition ":"
 syntax match ghciDefinition ":?"
@@ -51,6 +53,7 @@ syntax region ghciString start='"' end='"' contains=stringSpecial
 syntax match ghciModule "\v[A-Za-z\.]+" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax match ghciComment "\v--.*$"
 
+highlight link lambda Operator
 highlight link ghciModule Underlined
 highlight link ghciParens Special
 highlight link ghciOperator Number

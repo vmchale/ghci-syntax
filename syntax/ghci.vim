@@ -63,6 +63,7 @@ highlight link ghciKeyword Keyword
 highlight link ghciDefinition Structure
 highlight link ghciFlag Special
 highlight link stringSpecial Special
+highlight link ghciSpecial Special
 highlight link ghciString Comment
 highlight link ghciComment Comment
 

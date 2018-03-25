@@ -3,8 +3,6 @@ if exists('b:current_syntax')
 endif
 
 syntax keyword ghciKeyword prompt
-syntax match ghciSpecial ":{"
-syntax match ghciSpecial ":}"
 syntax match ghciDefinition ":"
 syntax match ghciDefinition ":?"
 syntax match ghciDefinition ":!"
@@ -52,6 +50,8 @@ syntax match ghciIdentifier "\v[a-z][A-Za-z]*" contains=ghciDefinition,ghciFlag,
 syntax region ghciString start='"' end='"' contains=stringSpecial
 syntax match ghciModule "\v[A-Za-z.]+" contains=ghciDefinition,ghciFlag,ghcFlag,ghciKeyword
 syntax match ghciComment "\v--.*$"
+syntax match ghciSpecial ":{"
+syntax match ghciSpecial ":}"
 
 highlight link ghciModule Underlined
 highlight link ghciParens Special

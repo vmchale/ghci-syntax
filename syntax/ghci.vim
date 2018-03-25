@@ -3,6 +3,8 @@ if exists('b:current_syntax')
 endif
 
 syntax keyword ghciKeyword prompt
+syntax match ghciSpecial ":{"
+syntax match ghciSpecial ":}"
 syntax match ghciDefinition ":"
 syntax match ghciDefinition ":?"
 syntax match ghciDefinition ":!"
@@ -41,8 +43,6 @@ syntax match ghciDefinition ":trace"
 syntax match ghciDefinition ":type"
 syntax match ghciDefinition ":undef"
 syntax match ghciDefinition ":unset"
-syntax match ghciSpecial ":{"
-syntax match ghciSpecial ":}"
 syntax match ghciFlag "\v\+[A-Za-z]"
 syntax match ghcFlag "\v-[A-za-z\-]*"
 syntax match stringSpecial '\\"'
